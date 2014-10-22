@@ -61,7 +61,8 @@ def wall_add(msg):
     return result
 
 def clear_wall():
-    result = wall_list.clear()
+    print session
+    result = session.clear()
     return result
 
 

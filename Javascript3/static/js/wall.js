@@ -17,6 +17,8 @@ $("#messages-clear").click(function () {
         console.log("Button!");
 }
 );
+     $("#message-container").empty();
+     getMessages();
 });
 
 /**
@@ -61,18 +63,18 @@ function addMessage(msg) {
 //     });
 // }
 
-function clearMessages() {
+// function clearMessages() {
 
-    $.post(
-        "/api/wall/delete",
-        {},
-        function(){
-            console.log("Yippiee!");
-            // displayResultStatus();
+//     $.post(
+//         "/api/wall/delete",
+//         {},
+//         function(){
+//             console.log("Yippiee!");
+//             // displayResultStatus();
 
-        }
-);
-}
+//         }
+// );
+// }
 
 function getMessages() {
     $.get("/api/wall/list", function (result) {
